@@ -1,10 +1,7 @@
 const booksContainer = document.querySelector(".books");
 
-const sliderList = document.querySelector(".slider__list");
-const sliderImages = ["js", "react", "node", "angular", "git", "mongo-db"];
-
-fetch("books.json") // 🕵️‍♀️ Поиск файла
-  .then((response) => response.json()) // 📬 Загрузка
+fetch("books.json")
+  .then((response) => response.json())
   .then((data) => {
     data.books.forEach((book) => {
       const bookImage =
@@ -13,8 +10,3 @@ fetch("books.json") // 🕵️‍♀️ Поиск файла
       booksContainer.insertAdjacentHTML("beforeend", bookItem);
     });
   });
-
-sliderImages.forEach((img) => {
-  const sliderItem = `<li class="slider__item"><img src="./assets/slider-images/${img}.jpg" alt=${img} class="slider__img" width="800"/></li>`;
-  sliderList.insertAdjacentHTML("beforeend", sliderItem);
-});

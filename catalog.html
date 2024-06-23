@@ -65,16 +65,26 @@
     </header>
     <main class="main">
       <div class="container">
-        <div class="slider">
-          <ul class="slider__list"></ul>
-          <a href="catalog.html" class="button slider__button"
-            >Discover all books</a
-          >
-        </div>
+        <form class="form">
+          <div>
+            <label for="search" class="form__label">Search for book name</label>
+            <input
+              type="text"
+              id="search"
+              class="form__input"
+              placeholder="JavaScript"
+              name="search"
+            />
+          </div>
+          <div>
+            <label for="search" class="form__label">Price</label>
+            <input type="range" id="price" class="form__input" name="price" />
+          </div>
+        </form>
+        <ul class="books"></ul>
       </div>
     </main>
-    <footer class="footer">All rights reserved</footer>
 
-    <script src="slider.js" type="module"></script>
+    <script src="catalog.js" type="module"></script>
   </body>
 </html>
